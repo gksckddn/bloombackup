@@ -28,6 +28,16 @@ function onload(e) {
         let pdetail = Headingtitle.nextElementSibling;
         pdetail.innerText = element.detail;
 
+		let userNo = p.querySelector(".reactions div");
+		if (userNo != null) {
+			console.log(userNo);
+		userNo.innerText = element.name;
+	    
+		} else {
+  			userNo = p.querySelector(".reactions");
+		    userNo.innerHTML = "<div>비공개</div>";
+		}
+
         container.append(p);
       });
 
